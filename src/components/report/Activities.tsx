@@ -4,48 +4,45 @@ import exhibit4 from "@/assets/exhibit-4.png";
 
 const activities = [
   {
+    category: "TikTok and Social Media",
+    items: [
+      "TikTok posts: 31 total posts across the semester, a mix of video posts and carousels, produced and managed by Joy, Payton, and Julia.",
+      "YouTube Shorts: 9 total Shorts uploaded to the exhibit's YouTube channel, repurposed from TikTok videos.",
+      "Viral videos: Julia's top video reached 268,300 views; Payton's top video reached 183,500 views. Three additional videos reached 67,000, 70,000, and 190,000 views respectively.",
+      "Analytics review: Performance data tracked weekly, including views, watch time, shares, and follower growth, used to adjust format and posting schedule.",
+    ],
+  },
+  {
+    category: "RedNote and Influencer Marketing",
+    items: [
+      "RedNote account: Account created in early March and registered as a business account by end of March. Five posts published within the first month using videos from the shared drive and original content built from exhibit photos.",
+      "JoinBrands campaign: One active campaign launched. Received 8 applications. Reviewed applicants based on content quality, engagement rate, and Seattle-local status.",
+      "Afluencer campaign: One active campaign launched. Received 6 applications. Reviewed using the same criteria as JoinBrands.",
+      "Total influencer applicants: 14 across both platforms. 9 were Seattle-based creators.",
+      "Influencer collaboration, Yana: One influencer selected and approved. She visited the exhibit and created content for both Instagram and TikTok. Her video reached approximately 2,500 views.",
+      "Direct Instagram outreach: Reached out individually to influencers focused on art, travel, and local experiences, with personalized messages.",
+      "Brand ambassador meetings: Met with representatives from multiple platforms to evaluate options before committing to JoinBrands and Afluencer.",
+      "Exhibit manager coordination: Coordinated in-person visits with the Exquisite Creatures manager to support influencer collaborations.",
+      "TikTok influencer tracker (Payton to Christy): Initial tracker built by Payton logging TikTok handles, follower counts, and pricing for 13 creators. Christy continued building and managing it.",
+    ],
+  },
+  {
     category: "Digital Infrastructure",
     items: [
-      "Google Analytics 4 property creation and configuration",
-      "Google Tag Manager implementation for event tracking",
-      "Google Ads account setup with campaign structure (Search, Display, Video)",
-      "Google Ad Grant application and approval for nonprofit advertising",
-      "Keyword research and ad copy development",
-      "Landing page performance analysis and optimization recommendations",
-      "Weekly performance reporting and optimization cycles",
+      "Google Ads: Built the active keyword list, created 3 campaign concepts, launched 1 paid campaign and 1 nonprofit campaign, and built 2 additional campaign drafts for future use.",
+      "GA4 and Google Tag Manager: Both configured and connected to ad campaigns.",
+      "Google Business Profile: Responded to reviews and made improvements to support local search and Maps visibility.",
+      "SEO and AEO documents: Two recommendation documents produced, one from an SEO professional and one from AI-based analysis, covering both the Bokun site and the Christopher Marley website.",
+      "AI toolbox: Researched roughly 8 AI tools and built a decision guide and instruction manual tailored to Exquisite Creatures' specific use cases.",
+      "AI presentation: Slide deck produced to introduce AI options and demonstrate practical applications.",
     ],
   },
   {
-    category: "Tourism & Transit",
+    category: "Tourism and Transit Outreach",
     items: [
-      "Google Business Profile audit and optimization",
-      "Local transit partnership research (Lynx, SunRail, I-Ride)",
-      "Visit Orlando listing review and enhancement suggestions",
-      "Hotel concierge outreach strategy development",
-      "Wayfinding and accessibility assessment",
-      "Competitive analysis of similar attraction marketing",
-    ],
-  },
-  {
-    category: "Content & Social Media",
-    items: [
-      "Content audit of existing Orlando Science Center social channels",
-      "Content calendar development (8-week plan)",
-      "Photography and videography of exhibit specimens",
-      "Instagram Reels and TikTok content production",
-      "Hashtag strategy and community management guidelines",
-      "Influencer outreach list and collaboration framework",
-    ],
-  },
-  {
-    category: "Community Engagement",
-    items: [
-      "Stakeholder mapping and community partner identification",
-      "School field trip promotion strategy",
-      "UCF student organization partnership development",
-      "Community event concept proposals (Family Science Night, etc.)",
-      "Feedback collection methodology design",
-      "Accessibility and inclusion audit recommendations",
+      "Visit Seattle: Email outreach completed, meeting held, membership process started, exhibit listed on visitseattle.org. Website build in progress.",
+      "King County Metro: Contact made with Neal, Zoom meeting held with Neal and Allison, Ultra Super King bus wrap format researched at an estimated 22,680,153 impressions per campaign. World Cup July window identified.",
+      "Washington Getout Pass: Partnership reviewed in full. Team and sponsor declined after evaluating the terms.",
     ],
   },
 ];
@@ -53,6 +50,9 @@ const activities = [
 const Activities = () => (
   <section className="py-20 px-6 max-w-7xl mx-auto">
     <SectionHeader id="activities" title="List of Activities" accentColor="bg-secondary" />
+    <p className="text-foreground/80 leading-relaxed mb-8">
+      Across the semester, the team's combined work covered TikTok and social media content, RedNote account management, influencer platform campaigns, direct outreach, paid advertising, SEO and AI tooling, and tourism and transit partnerships.
+    </p>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div className="lg:col-span-2 space-y-8">
         {activities.map((a) => (
