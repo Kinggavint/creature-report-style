@@ -4,25 +4,28 @@ import exhibit7 from "@/assets/exhibit-7.png";
 import exhibit8 from "@/assets/exhibit-8.png";
 
 const links = [
-  { name: "Google Analytics 4 Dashboard", url: "https://analytics.google.com", type: "Analytics" },
-  { name: "Google Ads (Paid)", url: "https://ads.google.com", type: "Advertising" },
-  { name: "Google Ad Grant Portal", url: "https://www.google.com/grants/", type: "Advertising" },
-  { name: "Google Business Profile", url: "https://business.google.com", type: "Local SEO" },
-  { name: "Orlando Science Center Website", url: "https://www.osc.org", type: "Website" },
-  { name: "Visit Orlando Partner Portal", url: "https://www.visitorlando.com", type: "Tourism" },
-  { name: "Lynx Transit Information", url: "https://www.golynx.com", type: "Transit" },
-  { name: "SunRail Schedule", url: "https://sunrail.com", type: "Transit" },
+  { name: "Exquisite Creatures TikTok", url: "https://www.tiktok.com/@exquisitecreatures" },
+  { name: "Exquisite Creatures YouTube", url: "http://www.youtube.com/@exquisitecreaturesexhibit" },
+  { name: "Visit Seattle Listing", url: "https://visitseattle.org/members/biophilia-museums-and-exhibits-of-art-nature-and-science/" },
+  { name: "Influencer Outreach Tracker (Excel)", url: "https://byu-my.sharepoint.com/:x:/r/personal/pbwall_byu_edu/Documents/Influencer%20Outreach.xlsx" },
+  { name: "TripAdvisor Pre-Written Responses", url: "https://docs.google.com/document/d/1p_heJ9XJ_BYCJrHowvpUuj95EHM1rIluey_0MhZ9Wlo/edit" },
+  { name: "King County Bus Impressions Data", url: "https://docs.google.com/document/d/1XK_J6R4qW5XYyk3I2r9-9wBdsWmokoyTuOf5yvTVDOg/edit" },
+  { name: "Publer (video/photo downloader)", url: "https://publer.com/tools/photo-video-downloader" },
+  { name: "VistaSocial (post scheduling)", url: "https://vistasocial.com/login" },
+  { name: "CapCut (video editing)", url: "https://www.capcut.com" },
+  { name: "JoinBrands", url: "https://www.joinbrands.com" },
+  { name: "Afluencer", url: "https://afluencer.com" },
+  { name: "JoinBrands Support, Diego Ross", url: "mailto:dr@joinbrands.com" },
 ];
 
 const Appendix = () => (
   <section className="py-20 px-6 max-w-7xl mx-auto">
-    <SectionHeader id="appendix" title="Appendix" subtitle="Key resources and references" accentColor="bg-muted-foreground" />
+    <SectionHeader id="appendix" title="Appendix" subtitle="Tools, platforms, accounts, and documents referenced throughout this report" accentColor="bg-muted-foreground" />
     <div className="bg-card border border-border rounded-lg overflow-hidden mb-10">
       <Table>
         <TableHeader>
           <TableRow className="border-border">
             <TableHead className="text-primary font-serif">Resource</TableHead>
-            <TableHead className="text-primary font-serif">Type</TableHead>
             <TableHead className="text-primary font-serif">URL</TableHead>
           </TableRow>
         </TableHeader>
@@ -30,9 +33,8 @@ const Appendix = () => (
           {links.map((l) => (
             <TableRow key={l.name} className="border-border">
               <TableCell className="font-medium">{l.name}</TableCell>
-              <TableCell className="text-muted-foreground">{l.type}</TableCell>
               <TableCell>
-                <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm">
+                <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm break-all">
                   {l.url}
                 </a>
               </TableCell>
@@ -53,9 +55,6 @@ const Appendix = () => (
       <div className="gradient-divider max-w-xs mx-auto mb-6" />
       <p className="text-muted-foreground text-sm">
         Exquisite Creatures Exhibit — OCI Final Report — Spring 2026
-      </p>
-      <p className="text-muted-foreground/60 text-xs mt-2">
-        UCF Rosen College of Hospitality Management
       </p>
     </div>
   </section>
