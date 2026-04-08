@@ -1,5 +1,4 @@
 import SlideLayout from "../SlideLayout";
-import viralImg from "@/assets/slides/tiktok-viral.jpg";
 
 const Slide13ViralVideo = () => (
   <SlideLayout>
@@ -23,9 +22,16 @@ const Slide13ViralVideo = () => (
           </div>
         </div>
       </div>
-      <div className="w-[400px] flex items-center justify-center">
-        <div className="rounded-2xl overflow-hidden shadow-2xl border" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
-          <img src={viralImg} alt="Most viral TikTok video" className="w-full h-auto" />
+      <div className="w-[350px] flex items-center justify-center">
+        <div className="rounded-2xl overflow-hidden shadow-2xl border" style={{ borderColor: "rgba(255,255,255,0.15)" }}>
+          <video
+            src="/videos/viral-tiktok.mp4"
+            controls
+            muted
+            playsInline
+            className="w-full h-auto max-h-[600px]"
+            style={{ borderRadius: "16px" }}
+          />
         </div>
       </div>
     </div>
