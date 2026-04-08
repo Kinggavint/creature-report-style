@@ -1,6 +1,4 @@
 import SlideLayout from "../SlideLayout";
-import capcut1 from "@/assets/slides/capcut-1.jpg";
-import capcut2 from "@/assets/slides/capcut-2.jpg";
 
 const steps = [
   "Choosing an existing voiceover clip from the @christophermarleystudio Instagram page, where he talks about the deep meaning of the pieces or shares facts about some of the specimens.",
@@ -14,7 +12,7 @@ const steps = [
 
 const Slide17CreationProcess = () => (
   <SlideLayout>
-    <div className="flex h-full px-20 py-16 gap-10">
+    <div className="flex h-full px-20 py-16">
       <div className="flex-1 flex flex-col">
         <h2 className="text-[40px] font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif", color: "#00A896" }}>
           Content Creation Process
@@ -33,14 +31,6 @@ const Slide17CreationProcess = () => (
             </li>
           ))}
         </ol>
-      </div>
-      <div className="w-[520px] flex flex-col gap-4 justify-center">
-        <div className="rounded-xl overflow-hidden border" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
-          <img src={capcut1} alt="CapCut editing process" className="w-full h-auto" />
-        </div>
-        <div className="rounded-xl overflow-hidden border" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
-          <img src={capcut2} alt="CapCut editing timeline" className="w-full h-auto" />
-        </div>
       </div>
     </div>
   </SlideLayout>

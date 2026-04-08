@@ -2,13 +2,15 @@ import SlideLayout from "../SlideLayout";
 import joyImg from "@/assets/slides/joy-forte.jpg";
 import paytonImg from "@/assets/slides/payton-walling.jpg";
 import gavinImg from "@/assets/slides/gavin-turnmire.png";
+import christyImg from "@/assets/slides/christy-shen.png";
+import juliaImg from "@/assets/slides/julia-powell.png";
 
 const team = [
-  { name: "Joy Forte", role: "Team Leader", img: joyImg, pos: "center center", desc: "Coordinated the group across the full semester. Scheduled weekly meetings, maintained regular contact with the sponsor, and kept the team aligned as workstream priorities shifted." },
-  { name: "Payton Walling", role: "Project Manager", img: paytonImg, pos: "center center", desc: "Responsible for making sure the project was on track. Social media manager for TikTok and YouTube. Headed the workplan, started influencer outreach, and consistently posted on social media." },
-  { name: "Gavin Turnmire", role: "Digital Infrastructure", img: gavinImg, pos: "center center", desc: "Responsible for Google Ads, GA4 + Tag Manager, SEO, Google Business Profile, and AI tooling." },
-  { name: "Christy Shen", role: "Sponsor Liaison", img: null, pos: "center center", desc: "Managed RedNote (Xiaohongshu) account. Targeted Chinese-speaking audience. Led influencer outreach on platforms and direct." },
-  { name: "Julia Powell", role: "Report Manager", img: null, pos: "center center", desc: "Created 20+ social media posts on TikTok. Recorded and organized team meeting notes. Partnership evaluation and technical support." },
+  { name: "Joy Forte", role: "Team Leader", img: joyImg, pos: "center 20%", desc: "Coordinated the group across the full semester. Scheduled weekly meetings, maintained regular contact with the sponsor, and kept the team aligned as workstream priorities shifted." },
+  { name: "Payton Walling", role: "Project Manager", img: paytonImg, pos: "center 20%", desc: "Responsible for making sure the project was on track. Social media manager for TikTok and YouTube. Headed the workplan, started influencer outreach, and consistently posted on social media." },
+  { name: "Gavin Turnmire", role: "Digital Infrastructure", img: gavinImg, pos: "center 20%", desc: "Responsible for Google Ads, GA4 + Tag Manager, SEO, Google Business Profile, and AI tooling." },
+  { name: "Christy Shen", role: "Sponsor Liaison", img: christyImg, pos: "center 20%", desc: "Managed RedNote (Xiaohongshu) account. Targeted Chinese-speaking audience. Led influencer outreach on platforms and direct." },
+  { name: "Julia Powell", role: "Report Manager", img: juliaImg, pos: "center 30%", desc: "Created 20+ social media posts on TikTok. Recorded and organized team meeting notes. Partnership evaluation and technical support." },
 ];
 
 const Slide02Team = () => (
