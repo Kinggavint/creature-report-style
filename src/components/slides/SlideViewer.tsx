@@ -143,9 +143,7 @@ const SlideViewer = () => {
                 key={idx}
                 onClick={() => goTo(idx)}
                 className={`w-full text-left p-2 rounded-lg mb-1 transition-all text-xs ${
-                  idx === currentSlide
-                    ? "ring-2"
-                    : "hover:bg-white/5"
+                  idx === currentSlide ? "" : "hover:bg-white/5"
                 }`}
                 style={{
                   color: idx === currentSlide ? "#00A896" : "rgba(255,255,255,0.6)",
