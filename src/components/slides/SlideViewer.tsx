@@ -149,8 +149,8 @@ const SlideViewer = () => {
                 }`}
                 style={{
                   color: idx === currentSlide ? "#00A896" : "rgba(255,255,255,0.6)",
-                  ringColor: idx === currentSlide ? "#00A896" : undefined,
                   background: idx === currentSlide ? "rgba(0,168,150,0.1)" : undefined,
+                  boxShadow: idx === currentSlide ? "inset 0 0 0 2px #00A896" : undefined,
                 }}
               >
                 <span className="font-mono mr-1" style={{ color: "#D4A853" }}>{idx + 1}.</span>
