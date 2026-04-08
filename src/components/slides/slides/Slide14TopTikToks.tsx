@@ -1,5 +1,5 @@
 import SlideLayout from "../SlideLayout";
-import { Eye, Heart, Share2, Users, Clock, Play, MessageCircle, Bookmark, Timer } from "lucide-react";
+import { Eye, Heart, Users } from "lucide-react";
 import vid1Img from "@/assets/slides/tiktok-video1.png";
 import vid2Img from "@/assets/slides/tiktok-video2.png";
 import vid3Img from "@/assets/slides/tiktok-video3.png";
@@ -28,54 +28,22 @@ const Slide14TopTikToks = () => (
               <img src={d.img} alt={d.name} className="w-full h-full object-cover object-top" />
             </div>
 
-            {/* Title */}
-            <div className="px-4 pt-3 pb-2 flex items-center justify-between">
-              <h3 className="text-[18px] font-bold" style={{ color: "#FAFAF0" }}>{d.name}</h3>
-              <span className="text-[12px] px-2 py-0.5 rounded-full" style={{ background: "rgba(212,168,83,0.15)", color: "#D4A853" }}>{d.date}</span>
-            </div>
-
-            {/* Key metrics grid */}
-            <div className="px-4 pb-3 grid grid-cols-2 gap-x-4 gap-y-2 flex-1">
+            {/* Key metrics */}
+            <div className="px-4 py-4 flex flex-col gap-3 flex-1">
               <div className="flex items-center gap-2">
-                <Eye size={14} style={{ color: "#00A896" }} />
-                <span className="text-[13px]" style={{ color: "rgba(255,255,255,0.5)" }}>Views</span>
-                <span className="text-[14px] font-bold ml-auto" style={{ color: "#00A896" }}>{d.views}</span>
+                <Eye size={16} style={{ color: "#00A896" }} />
+                <span className="text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>Views</span>
+                <span className="text-[18px] font-bold ml-auto" style={{ color: "#00A896" }}>{d.views}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Heart size={14} style={{ color: "#E8725C" }} />
-                <span className="text-[13px]" style={{ color: "rgba(255,255,255,0.5)" }}>Likes</span>
-                <span className="text-[14px] font-bold ml-auto" style={{ color: "#E8725C" }}>{d.likes}</span>
+                <Heart size={16} style={{ color: "#E8725C" }} />
+                <span className="text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>Likes</span>
+                <span className="text-[18px] font-bold ml-auto" style={{ color: "#E8725C" }}>{d.likes}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Share2 size={14} style={{ color: "#4A90D9" }} />
-                <span className="text-[13px]" style={{ color: "rgba(255,255,255,0.5)" }}>Shares</span>
-                <span className="text-[14px] font-bold ml-auto" style={{ color: "#4A90D9" }}>{d.shares}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Bookmark size={14} style={{ color: "#9B8BB4" }} />
-                <span className="text-[13px]" style={{ color: "rgba(255,255,255,0.5)" }}>Saves</span>
-                <span className="text-[14px] font-bold ml-auto" style={{ color: "#9B8BB4" }}>{d.saves}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users size={14} style={{ color: "#D4A853" }} />
-                <span className="text-[13px]" style={{ color: "rgba(255,255,255,0.5)" }}>Followers</span>
-                <span className="text-[14px] font-bold ml-auto" style={{ color: "#D4A853" }}>+{d.newFollowers}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MessageCircle size={14} style={{ color: "#7EC8A0" }} />
-                <span className="text-[13px]" style={{ color: "rgba(255,255,255,0.5)" }}>Comments</span>
-                <span className="text-[14px] font-bold ml-auto" style={{ color: "#7EC8A0" }}>{d.comments}</span>
-              </div>
-            </div>
-
-            {/* Watch metrics */}
-            <div className="px-4 pb-4 pt-1 border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-              <div className="flex justify-between text-[12px] mt-2">
-                <span style={{ color: "rgba(255,255,255,0.4)" }}>Avg Watch: <strong style={{ color: "#FAFAF0" }}>{d.avgWatch}</strong></span>
-                <span style={{ color: "rgba(255,255,255,0.4)" }}>Full: <strong style={{ color: "#FAFAF0" }}>{d.fullWatch}</strong></span>
-              </div>
-              <div className="flex justify-center text-[12px] mt-1">
-                <span style={{ color: "rgba(255,255,255,0.4)" }}>Total Play: <strong style={{ color: "#FAFAF0" }}>{d.totalPlay}</strong></span>
+                <Users size={16} style={{ color: "#D4A853" }} />
+                <span className="text-[15px]" style={{ color: "rgba(255,255,255,0.5)" }}>Followers</span>
+                <span className="text-[18px] font-bold ml-auto" style={{ color: "#D4A853" }}>+{d.newFollowers}</span>
               </div>
             </div>
           </div>
