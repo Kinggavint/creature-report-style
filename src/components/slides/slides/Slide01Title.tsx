@@ -4,8 +4,8 @@ import heroImg from "@/assets/hero-storefront.png";
 const Slide01Title = () => (
   <SlideLayout>
     <div className="absolute inset-0">
-      <img src={heroImg} alt="" className="w-full h-full object-cover opacity-30" />
-      <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(26,26,46,0.9) 100%)" }} />
+      <img src={heroImg} alt="" className="w-full h-full object-cover opacity-40" />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,10,10,0.75) 0%, rgba(26,26,46,0.82) 100%)" }} />
     </div>
     <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-20">
       <div className="w-24 h-1 rounded-full mb-12" style={{ background: "linear-gradient(90deg, #00A896, #D4A853)" }} />
