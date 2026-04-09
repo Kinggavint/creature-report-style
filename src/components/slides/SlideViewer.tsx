@@ -218,10 +218,10 @@ const SlideViewer = () => {
               <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
                 {currentSlide + 1} / {slides.length}
               </span>
-              <button onClick={handleExport} disabled={exporting}
+              <button onClick={() => handleExport("pdf")} disabled={exporting}
                 className="p-1.5 rounded hover:bg-white/10 transition-colors disabled:opacity-50"
                 style={{ color: "rgba(255,255,255,0.7)" }}
-                title="Download as PowerPoint">
+                title="Download as PDF">
                 {exporting ? <Loader2 size={18} className="animate-spin" /> : <Download size={18} />}
               </button>
               <button onClick={toggleFullscreen}
