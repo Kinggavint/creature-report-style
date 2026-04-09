@@ -1,12 +1,12 @@
 import SlideLayout from "../SlideLayout";
 import { TrendingUp, Users, Heart, Eye, Share2, MessageCircle } from "lucide-react";
 
-const metrics = [
-  { icon: Users, label: "Followers", before: 33, after: 4200, growth: "12,627%", color: "#00A896" },
+const metrics: { icon: any; label: string; before: number; after: number; growth: string | null; color: string }[] = [
+  { icon: Users, label: "Followers", before: 33, after: 4000, growth: "12,021%", color: "#00A896" },
   { icon: Heart, label: "Likes", before: 275, after: 139700, growth: "50,700%", color: "#E8725C" },
-  { icon: Eye, label: "Views", before: 0, after: 687000, growth: "∞", color: "#D4A853" },
-  { icon: Share2, label: "Shares", before: 0, after: 6853, growth: "∞", color: "#4A90D9" },
-  { icon: MessageCircle, label: "Comments", before: 0, after: 422, growth: "∞", color: "#9B59B6" },
+  { icon: Eye, label: "Views", before: 0, after: 687000, growth: null, color: "#D4A853" },
+  { icon: Share2, label: "Shares", before: 0, after: 6853, growth: null, color: "#4A90D9" },
+  { icon: MessageCircle, label: "Comments", before: 0, after: 422, growth: null, color: "#9B59B6" },
 ];
 
 const sinceItems = [
