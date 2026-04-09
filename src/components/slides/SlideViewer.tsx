@@ -208,9 +208,20 @@ const SlideViewer = () => {
               </span>
             </div>
             <div className="flex items-center gap-3">
+              {exporting && (
+                <span className="text-xs" style={{ color: "#00A896" }}>
+                  Exporting {exportProgress}...
+                </span>
+              )}
               <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
                 {currentSlide + 1} / {slides.length}
               </span>
+              <button onClick={handleExport} disabled={exporting}
+                className="p-1.5 rounded hover:bg-white/10 transition-colors disabled:opacity-50"
+                style={{ color: "rgba(255,255,255,0.7)" }}
+                title="Download as PowerPoint">
+                {exporting ? <Loader2 size={18} className="animate-spin" /> : <Download size={18} />}
+              </button>
               <button onClick={toggleFullscreen}
                 className="p-1.5 rounded hover:bg-white/10 transition-colors"
                 style={{ color: "rgba(255,255,255,0.7)" }}>
@@ -223,6 +234,7 @@ const SlideViewer = () => {
         {/* Slide canvas */}
         <div ref={containerRef} className="flex-1 relative overflow-hidden flex items-center justify-center">
           <div
+            data-slide-canvas
             style={{
               width: 1920,
               height: 1080,
