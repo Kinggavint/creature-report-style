@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List, Download, FileDown, Loader2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List, Download, Loader2 } from "lucide-react";
 import { exportSlidesToPptx } from "./exportToPptx";
 import { exportSlidesToPdf } from "./exportToPdf";
 
