@@ -4,7 +4,10 @@ import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List } from "lucid
 // Import all slides
 import Slide01Title from "./slides/Slide01Title";
 import Slide02Team from "./slides/Slide02Team";
-import Slide03SCQA from "./slides/Slide03SCQA";
+import Slide03Situation from "./slides/Slide03Situation";
+import Slide03bComplication from "./slides/Slide03bComplication";
+import Slide03cQuestion from "./slides/Slide03cQuestion";
+import Slide03dAnswer from "./slides/Slide03dAnswer";
 import Slide04InsightDigital from "./slides/Slide04InsightDigital";
 import Slide05GoogleAds from "./slides/Slide05GoogleAds";
 import Slide06GA4 from "./slides/Slide06GA4";
