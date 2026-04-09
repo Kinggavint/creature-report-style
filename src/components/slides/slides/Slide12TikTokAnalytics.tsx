@@ -56,7 +56,7 @@ const Slide12TikTokAnalytics = () => (
           <h3 className="text-[20px] font-semibold mb-5" style={{ color: "#FAFAF0" }}>Growth Timeline</h3>
           <div className="space-y-5">
             {[
-              { label: "Followers", start: 33, mid: 900, final: 4200, color: "#00A896" },
+              { label: "Followers", start: 33, mid: 900, final: 4000, color: "#00A896" },
               { label: "Likes", start: 275, mid: 16700, final: 139700, color: "#E8725C" },
               { label: "Views", start: 0, mid: 96000, final: 687000, color: "#D4A853" },
               { label: "Shares", start: 0, mid: 574, final: 6853, color: "#4A90D9" },
