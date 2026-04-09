@@ -12,17 +12,17 @@ const steps = [
 
 const Slide18SocialNextSteps = () => (
   <SlideLayout>
-    <div className="flex flex-col h-full px-20 py-16">
+    <div className="flex flex-col h-full px-20 py-14">
       <h2 className="text-[44px] font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif", color: "#00A896" }}>
         Social Media Status & Next Steps
       </h2>
-      <div className="w-20 h-1 rounded-full mb-12" style={{ background: "#D4A853" }} />
+      <div className="w-20 h-1 rounded-full mb-8" style={{ background: "#D4A853" }} />
       <div className="flex-1 flex flex-col justify-center">
-        <div className="space-y-6">
+        <div className="grid grid-cols-2 gap-5">
           {steps.map((s, i) => (
-            <div key={i} className="flex items-center gap-5 rounded-xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}>
-              <ArrowRight size={24} style={{ color: "#00A896" }} className="flex-shrink-0" />
-              <p className="text-[22px]" style={{ color: "rgba(255,255,255,0.8)" }}>{s}</p>
+            <div key={i} className="flex items-center gap-5 rounded-xl p-7" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <ArrowRight size={28} style={{ color: "#00A896" }} className="flex-shrink-0" />
+              <p className="text-[22px] leading-relaxed" style={{ color: "rgba(255,255,255,0.8)" }}>{s}</p>
             </div>
           ))}
         </div>

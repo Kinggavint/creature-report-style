@@ -15,16 +15,15 @@ const team = [
 
 const Slide02Team = () => (
   <SlideLayout>
-    <div className="flex flex-col h-full px-12 py-10">
+    <div className="flex flex-col h-full px-10 py-8">
       <h2 className="text-[48px] font-bold mb-1" style={{ fontFamily: "'Playfair Display', serif", color: "#00A896" }}>
         Our Team
       </h2>
-      <div className="w-20 h-1 rounded-full mb-6" style={{ background: "#D4A853" }} />
-      <div className="flex gap-8 flex-1 items-stretch justify-center">
+      <div className="w-20 h-1 rounded-full mb-4" style={{ background: "#D4A853" }} />
+      <div className="flex gap-6 flex-1 items-start justify-center">
         {team.map((m) => (
           <div key={m.name} className="flex flex-col items-center text-center flex-1 max-w-[340px]">
-            {/* Photo container - large square with rounded corners */}
-            <div className="w-[240px] h-[280px] rounded-2xl overflow-hidden mb-5 flex-shrink-0 border-[3px]" style={{ borderColor: "#00A896" }}>
+            <div className="w-[280px] h-[340px] rounded-2xl overflow-hidden mb-4 flex-shrink-0 border-[3px]" style={{ borderColor: "#00A896" }}>
               {m.img ? (
                 <img
                   src={m.img}
@@ -38,9 +37,9 @@ const Slide02Team = () => (
                 </div>
               )}
             </div>
-            <h3 className="text-[26px] font-semibold mb-1" style={{ color: "#FAFAF0" }}>{m.name}</h3>
-            <p className="text-[17px] font-medium mb-3" style={{ color: "#D4A853" }}>{m.role}</p>
-            <p className="text-[15px] leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>{m.desc}</p>
+            <h3 className="text-[24px] font-semibold mb-1" style={{ color: "#FAFAF0" }}>{m.name}</h3>
+            <p className="text-[16px] font-medium mb-2" style={{ color: "#D4A853" }}>{m.role}</p>
+            <p className="text-[14px] leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>{m.desc}</p>
           </div>
         ))}
       </div>
