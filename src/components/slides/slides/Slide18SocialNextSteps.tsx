@@ -6,7 +6,7 @@ const steps = [
   "Take new videos from the exhibit",
   "Create high quality edited compilations",
   "Videos with Christopher Marley explaining the pieces in the exhibit",
-  "Continue to engage with comments — possibly responding to hate comments",
+  "Continue to engage with comments — possibly responding to comments",
   "Continue to repost influencer visit videos",
 ];
 

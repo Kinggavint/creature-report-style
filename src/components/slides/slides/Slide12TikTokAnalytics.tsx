@@ -1,12 +1,12 @@
 import SlideLayout from "../SlideLayout";
 import { TrendingUp, Users, Heart, Eye, Share2, MessageCircle } from "lucide-react";
 
-const metrics = [
-  { icon: Users, label: "Followers", before: 33, after: 4200, growth: "12,627%", color: "#00A896" },
+const metrics: { icon: any; label: string; before: number; after: number; growth: string | null; color: string }[] = [
+  { icon: Users, label: "Followers", before: 33, after: 4000, growth: "12,021%", color: "#00A896" },
   { icon: Heart, label: "Likes", before: 275, after: 139700, growth: "50,700%", color: "#E8725C" },
-  { icon: Eye, label: "Views", before: 0, after: 687000, growth: "∞", color: "#D4A853" },
-  { icon: Share2, label: "Shares", before: 0, after: 6853, growth: "∞", color: "#4A90D9" },
-  { icon: MessageCircle, label: "Comments", before: 0, after: 422, growth: "∞", color: "#9B59B6" },
+  { icon: Eye, label: "Views", before: 0, after: 687000, growth: null, color: "#D4A853" },
+  { icon: Share2, label: "Shares", before: 0, after: 6853, growth: null, color: "#4A90D9" },
+  { icon: MessageCircle, label: "Comments", before: 0, after: 422, growth: null, color: "#9B59B6" },
 ];
 
 const sinceItems = [
@@ -36,10 +36,13 @@ const Slide12TikTokAnalytics = () => (
               <p className="text-[38px] font-bold mb-1" style={{ color: m.color }}>
                 {m.after >= 1000 ? `${(m.after / 1000).toFixed(m.after >= 100000 ? 0 : 1)}K` : m.after}
               </p>
+              {m.growth && (
               <div className="flex items-center gap-1">
                 <TrendingUp size={14} style={{ color: "#2ECC71" }} />
                 <span className="text-[14px] font-semibold" style={{ color: "#2ECC71" }}>{m.growth}</span>
               </div>
+              )}
+
               <p className="text-[13px] mt-1" style={{ color: "rgba(255,255,255,0.3)" }}>from {m.before.toLocaleString()}</p>
             </div>
           );
@@ -53,7 +56,7 @@ const Slide12TikTokAnalytics = () => (
           <h3 className="text-[20px] font-semibold mb-5" style={{ color: "#FAFAF0" }}>Growth Timeline</h3>
           <div className="space-y-5">
             {[
-              { label: "Followers", start: 33, mid: 900, final: 4200, color: "#00A896" },
+              { label: "Followers", start: 33, mid: 900, final: 4000, color: "#00A896" },
               { label: "Likes", start: 275, mid: 16700, final: 139700, color: "#E8725C" },
               { label: "Views", start: 0, mid: 96000, final: 687000, color: "#D4A853" },
               { label: "Shares", start: 0, mid: 574, final: 6853, color: "#4A90D9" },

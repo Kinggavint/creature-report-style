@@ -31,11 +31,11 @@ const Slide21PlatformPerf = () => (
         </div>
         <div className="w-[380px] flex flex-col gap-6 justify-center">
           <div className="rounded-xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}>
-            <h3 className="text-[22px] font-semibold mb-4" style={{ color: "#00A896" }}>JoinBrands</h3>
+            <h3 className="text-[22px] font-semibold mb-4" style={{ color: "#9B59B6" }}>JoinBrands</h3>
             <p className="text-[18px]" style={{ color: "rgba(255,255,255,0.7)" }}>12 received · 2 sent · 3 accepted · <span className="font-bold" style={{ color: "#00A896" }}>1 completed</span></p>
           </div>
           <div className="rounded-xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}>
-            <h3 className="text-[22px] font-semibold mb-4" style={{ color: "#D4A853" }}>Afluencer</h3>
+            <h3 className="text-[22px] font-semibold mb-4" style={{ color: "#2ECC71" }}>Afluencer</h3>
             <p className="text-[18px]" style={{ color: "rgba(255,255,255,0.7)" }}>8 received · 1 sent · 3 accepted · 0 completed</p>
           </div>
         </div>
