@@ -30,6 +30,7 @@ import Slide25VisitSeattle from "./slides/Slide25VisitSeattle";
 import Slide26BusAds from "./slides/Slide26BusAds";
 import Slide27NextSteps from "./slides/Slide27NextSteps";
 import Slide28Conclusion from "./slides/Slide28Conclusion";
+import Slide29TicketSales from "./slides/Slide29TicketSales";
 
 const slides = [
   { component: Slide01Title, title: "Title" },
@@ -59,6 +60,7 @@ const slides = [
   { component: Slide25VisitSeattle, title: "Visit Seattle" },
   { component: Slide26BusAds, title: "Bus Advertising" },
   { component: Slide27NextSteps, title: "Overall Next Steps" },
+  { component: Slide29TicketSales, title: "Ticket Sales Impact" },
   { component: Slide28Conclusion, title: "Conclusion" },
 ];
 
