@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List, Download, Loader2 } from "lucide-react";
+import { exportSlidesToPptx } from "./exportToPptx";
 
 // Import all slides
 import Slide01Title from "./slides/Slide01Title";
@@ -133,6 +134,29 @@ const SlideViewer = () => {
     document.addEventListener("fullscreenchange", handler);
     return () => document.removeEventListener("fullscreenchange", handler);
   }, []);
+
+  const [exporting, setExporting] = useState(false);
+  const [exportProgress, setExportProgress] = useState("");
+
+  const handleExport = useCallback(async () => {
+    if (!viewerRef.current || exporting) return;
+    const savedSlide = currentSlide;
+    setExporting(true);
+    try {
+      await exportSlidesToPptx(
+        viewerRef.current,
+        slides.length,
+        (idx) => setCurrentSlide(idx),
+        (current, total) => setExportProgress(`${current}/${total}`)
+      );
+    } catch (err) {
+      console.error("Export failed:", err);
+    } finally {
+      setCurrentSlide(savedSlide);
+      setExporting(false);
+      setExportProgress("");
+    }
+  }, [currentSlide, exporting]);
 
   const CurrentSlideComponent = slides[currentSlide].component;
 
