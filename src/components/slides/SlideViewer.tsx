@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List, Download, Loader2 } from "lucide-react";
+import { exportSlidesToPptx } from "./exportToPptx";
 
 // Import all slides
 import Slide01Title from "./slides/Slide01Title";
@@ -134,6 +135,29 @@ const SlideViewer = () => {
     return () => document.removeEventListener("fullscreenchange", handler);
   }, []);
 
+  const [exporting, setExporting] = useState(false);
+  const [exportProgress, setExportProgress] = useState("");
+
+  const handleExport = useCallback(async () => {
+    if (!viewerRef.current || exporting) return;
+    const savedSlide = currentSlide;
+    setExporting(true);
+    try {
+      await exportSlidesToPptx(
+        viewerRef.current,
+        slides.length,
+        (idx) => setCurrentSlide(idx),
+        (current, total) => setExportProgress(`${current}/${total}`)
+      );
+    } catch (err) {
+      console.error("Export failed:", err);
+    } finally {
+      setCurrentSlide(savedSlide);
+      setExporting(false);
+      setExportProgress("");
+    }
+  }, [currentSlide, exporting]);
+
   const CurrentSlideComponent = slides[currentSlide].component;
 
   return (
@@ -184,9 +208,20 @@ const SlideViewer = () => {
               </span>
             </div>
             <div className="flex items-center gap-3">
+              {exporting && (
+                <span className="text-xs" style={{ color: "#00A896" }}>
+                  Exporting {exportProgress}...
+                </span>
+              )}
               <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
                 {currentSlide + 1} / {slides.length}
               </span>
+              <button onClick={handleExport} disabled={exporting}
+                className="p-1.5 rounded hover:bg-white/10 transition-colors disabled:opacity-50"
+                style={{ color: "rgba(255,255,255,0.7)" }}
+                title="Download as PowerPoint">
+                {exporting ? <Loader2 size={18} className="animate-spin" /> : <Download size={18} />}
+              </button>
               <button onClick={toggleFullscreen}
                 className="p-1.5 rounded hover:bg-white/10 transition-colors"
                 style={{ color: "rgba(255,255,255,0.7)" }}>
@@ -199,6 +234,7 @@ const SlideViewer = () => {
         {/* Slide canvas */}
         <div ref={containerRef} className="flex-1 relative overflow-hidden flex items-center justify-center">
           <div
+            data-slide-canvas
             style={{
               width: 1920,
               height: 1080,
