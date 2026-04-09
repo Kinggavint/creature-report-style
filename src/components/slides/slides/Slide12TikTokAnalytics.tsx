@@ -36,10 +36,13 @@ const Slide12TikTokAnalytics = () => (
               <p className="text-[38px] font-bold mb-1" style={{ color: m.color }}>
                 {m.after >= 1000 ? `${(m.after / 1000).toFixed(m.after >= 100000 ? 0 : 1)}K` : m.after}
               </p>
+              {m.growth && (
               <div className="flex items-center gap-1">
                 <TrendingUp size={14} style={{ color: "#2ECC71" }} />
                 <span className="text-[14px] font-semibold" style={{ color: "#2ECC71" }}>{m.growth}</span>
               </div>
+              )}
+
               <p className="text-[13px] mt-1" style={{ color: "rgba(255,255,255,0.3)" }}>from {m.before.toLocaleString()}</p>
             </div>
           );
