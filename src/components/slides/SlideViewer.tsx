@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight, Maximize, Minimize, Grid, List, Download, Loader2 } from "lucide-react";
 import { exportSlidesToPptx } from "./exportToPptx";
+import { exportSlidesToPdf } from "./exportToPdf";
 
 // Import all slides
 import Slide01Title from "./slides/Slide01Title";
@@ -138,12 +139,13 @@ const SlideViewer = () => {
   const [exporting, setExporting] = useState(false);
   const [exportProgress, setExportProgress] = useState("");
 
-  const handleExport = useCallback(async () => {
+  const handleExport = useCallback(async (format: "pptx" | "pdf") => {
     if (!viewerRef.current || exporting) return;
     const savedSlide = currentSlide;
     setExporting(true);
     try {
-      await exportSlidesToPptx(
+      const exportFn = format === "pdf" ? exportSlidesToPdf : exportSlidesToPptx;
+      await exportFn(
         viewerRef.current,
         slides.length,
         (idx) => setCurrentSlide(idx),
@@ -216,10 +218,10 @@ const SlideViewer = () => {
               <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
                 {currentSlide + 1} / {slides.length}
               </span>
-              <button onClick={handleExport} disabled={exporting}
+              <button onClick={() => handleExport("pdf")} disabled={exporting}
                 className="p-1.5 rounded hover:bg-white/10 transition-colors disabled:opacity-50"
                 style={{ color: "rgba(255,255,255,0.7)" }}
-                title="Download as PowerPoint">
+                title="Download as PDF">
                 {exporting ? <Loader2 size={18} className="animate-spin" /> : <Download size={18} />}
               </button>
               <button onClick={toggleFullscreen}
