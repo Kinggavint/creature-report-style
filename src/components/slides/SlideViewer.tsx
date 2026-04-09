@@ -139,12 +139,13 @@ const SlideViewer = () => {
   const [exporting, setExporting] = useState(false);
   const [exportProgress, setExportProgress] = useState("");
 
-  const handleExport = useCallback(async () => {
+  const handleExport = useCallback(async (format: "pptx" | "pdf") => {
     if (!viewerRef.current || exporting) return;
     const savedSlide = currentSlide;
     setExporting(true);
     try {
-      await exportSlidesToPptx(
+      const exportFn = format === "pdf" ? exportSlidesToPdf : exportSlidesToPptx;
+      await exportFn(
         viewerRef.current,
         slides.length,
         (idx) => setCurrentSlide(idx),
