@@ -38,7 +38,10 @@ import Slide29TicketSales from "./slides/Slide29TicketSales";
 const slides = [
   { component: Slide01Title, title: "Title" },
   { component: Slide02Team, title: "Team Overview" },
-  { component: Slide03SCQA, title: "Introduction (SCQA)" },
+  { component: Slide03Situation, title: "Situation" },
+  { component: Slide03bComplication, title: "Complication" },
+  { component: Slide03cQuestion, title: "Question" },
+  { component: Slide03dAnswer, title: "Answer" },
   { component: Slide04InsightDigital, title: "Insight 1: Digital Infrastructure" },
   { component: Slide05GoogleAds, title: "Google Ads" },
   { component: Slide06GA4, title: "GA4 + Tag Manager" },
